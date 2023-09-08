@@ -15,7 +15,12 @@ parch= st.number_input('Parch (0,1,2)',min_value=0, max_value=2) #no. of parents
 
 fare = st.number_input('Enter Fare') 
 
-
+uploaded_file = st.file_uploader(
+    "Choose your database", accept_multiple_files=False)
+if uploaded_file is not None:
+    file_name = uploaded_file
+else:
+    file_name = "DatabaseSample.xlsx"
  
 clicked=st.button('Get prediction')
 print(clicked)   
