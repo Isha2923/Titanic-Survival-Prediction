@@ -20,7 +20,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     file_name = uploaded_file
 else:
-    file_name = "DatabaseSample.xlsx"
+    file_name = "titanic.csv"
  
 clicked=st.button('Get prediction')
 print(clicked)   
